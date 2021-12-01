@@ -18,12 +18,10 @@ const database = {
         { id: 4, package: "Ultra Package", price: 7500 },
     ],
     wheels: [
-        { id: 1, name: "17-inch Pair Radial", price: 250 }
-        { id: 2, name: "17-inch Pair Radial Black", price: 300 }
-        { id: 3, name: "18-inch Pair Spoke Silver", price: 450 }
-        { id: 4, name: "18-inch Pair Radial Black", price: 500 }
+        { id: 1, name: "17-inch Pair Radial", price: 250 },
+        { id: 2, name: "17-inch Pair Radial Black", price: 300 },
+        { id: 3, name: "18-inch Pair Spoke Silver", price: 450 },
+        { id: 4, name: "18-inch Pair Radial Black", price: 500 },
     ],
-    orders: [
-        { id: 1, paintId: 1, interiorId: 1, techId: 1, wheelsId: 1 }
-    ],
+    orders: [{ id: 1, paintId: 1, interiorId: 1, techId: 1, wheelsId: 1 }],
 };
