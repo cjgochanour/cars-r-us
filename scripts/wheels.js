@@ -1,4 +1,4 @@
-import { getWheels } from "./database.js";
+import { getWheels, setWheels } from "./database.js";
 
 const wheels = getWheels();
 
@@ -11,7 +11,7 @@ document.addEventListener("change", (changeEvent) => {
             chosenOption = wheels.find(
                 (wheel) => parseInt(wheelId) === wheel.id
             );
-            window.alert(`You have selected the ${chosenOption.name}`);
+            setWheels(chosenOption.id);
         }
     }
 });

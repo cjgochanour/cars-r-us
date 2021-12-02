@@ -1,4 +1,4 @@
-import { getTech } from "./database.js";
+import { getTech, setTech } from "./database.js";
 
 const techs = getTech();
 
@@ -9,7 +9,7 @@ document.addEventListener("change", (changeEvent) => {
         const techId = changeEvent.target.value;
         if (techId > 0) {
             chosenOption = techs.find((tech) => parseInt(techId) === tech.id);
-            window.alert(`You have selected the ${chosenOption.package}`);
+            setTech(chosenOption.id);
         }
     }
 });

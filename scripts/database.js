@@ -24,6 +24,7 @@ const database = {
         { id: 4, name: "18-inch Pair Radial Black", price: 500 },
     ],
     orders: [{ id: 1, paintId: 1, interiorId: 1, techId: 1, wheelsId: 1 }],
+    orderBuilder: {},
 };
 
 export const getPaints = () => {
@@ -37,4 +38,16 @@ export const getTech = () => {
 };
 export const getWheels = () => {
     return database.wheels.map((wheel) => ({ ...wheel }));
+};
+export const setPaints = (id) => {
+    return (database.orderBuilder.paintId = id);
+};
+export const setInteriors = (id) => {
+    return (database.orderBuilder.intId = id);
+};
+export const setTech = (id) => {
+    return (database.orderBuilder.techId = id);
+};
+export const setWheels = (id) => {
+    return (database.orderBuilder.wheelId = id);
 };

@@ -1,4 +1,4 @@
-import { getInteriors } from "./database.js";
+import { getInteriors, setInteriors } from "./database.js";
 
 const interiors = getInteriors();
 
@@ -9,7 +9,7 @@ document.addEventListener("change", (changeEvent) => {
         const intId = changeEvent.target.value;
         if (intId > 0) {
             chosenOption = interiors.find((int) => parseInt(intId) === int.id);
-            window.alert(`You have selected the ${chosenOption.fabric}`);
+            setInteriors(chosenOption.id);
         }
     }
 });

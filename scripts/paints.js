@@ -1,4 +1,4 @@
-import { getPaints } from "./database.js";
+import { getPaints, setPaints } from "./database.js";
 
 const paints = getPaints();
 
@@ -11,7 +11,7 @@ document.addEventListener("change", (changeEvent) => {
             chosenOption = paints.find(
                 (paint) => parseInt(paintId) === paint.id
             );
-            window.alert(`You have selected the ${chosenOption.color}`);
+            setPaints(chosenOption.id);
         }
     }
 });
