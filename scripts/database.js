@@ -1,5 +1,5 @@
 const database = {
-    paint: [
+    paints: [
         { id: 1, color: "Silver", price: 200 },
         { id: 2, color: "Midnight Blue", price: 250 },
         { id: 3, color: "Firebrick Red", price: 400 },

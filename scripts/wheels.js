@@ -1,5 +1,31 @@
 import { getWheels } from "./database.js";
 
+const wheels = getWheels();
+
+document.addEventListener("change", (changeEvent) => {
+    let chosenOption;
+
+    if (changeEvent.target.id === "wheels") {
+        const wheelId = changeEvent.target.value;
+        if (wheelId > 0) {
+            chosenOption = wheels.find(
+                (wheel) => parseInt(wheelId) === wheel.id
+            );
+            window.alert(`You have selected the ${chosenOption.name}`);
+        }
+    }
+});
+
 export const Wheels = () => {
-    return `<h2>Wheels</h2>`;
+    let html = `<h2>Wheels</h2>
+    <select id="wheels">
+    <option value="0">Please select a configuration</option>`;
+
+    for (const wheel of wheels) {
+        html += `
+            <option value="${wheel.id}">${wheel.name}</option>`;
+    }
+
+    html += "</select>";
+    return html;
 };
