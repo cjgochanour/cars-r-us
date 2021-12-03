@@ -18,31 +18,31 @@ const interiors = Interiors();
 
 export const carsRus = () => {
     return `
-    <h1>Cars 'R Us</h1>
+        <h1>Cars 'R Us</h1>
 
-    <article class="choices">
-        <section class="choices__techs options">
-            ${techs}
-        </section>
-        <section class="choices__wheels options">
-            ${wheels}
-        </section>
-        <section class="choices__paints options">
-            ${paints}
-        </section>
-        <section class="choices__interiors options">
-            ${interiors}
-        </section>
-    </article>
+        <article class="choices">
+            <section class="choices__techs options">
+                ${techs}
+            </section>
+            <section class="choices__wheels options">
+                ${wheels}
+            </section>
+            <section class="choices__paints options">
+                ${paints}
+            </section>
+            <section class="choices__interiors options">
+                ${interiors}
+            </section>
+        </article>
 
-    <article>
-        <button id="orderButton">Create Custom Order</button>
-    </article>
+        <article>
+            <button id="orderButton">Create Custom Order</button>
+        </article>
 
-    <article class="customOrders">
-        <h2>Recent Orders</h2>
-        ${Orders()}
-    </article>
+        <article class="customOrders">
+            <h2>Recent Orders</h2>
+            ${Orders()}
+        </article>
 
-    `;
+        `;
 };

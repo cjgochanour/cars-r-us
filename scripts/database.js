@@ -55,13 +55,13 @@ export const setPaints = (id) => {
     return (database.orderBuilder.paintId = id);
 };
 export const setInteriors = (id) => {
-    return (database.orderBuilder.intId = id);
+    return (database.orderBuilder.interiorId = id);
 };
 export const setTech = (id) => {
     return (database.orderBuilder.techId = id);
 };
 export const setWheels = (id) => {
-    return (database.orderBuilder.wheelId = id);
+    return (database.orderBuilder.wheelsId = id);
 };
 export const createCustomOrder = () => {
     const newOrder = { ...database.orderBuilder };
