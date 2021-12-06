@@ -3,7 +3,7 @@ import { getTypes, setTypes } from "./database.js";
 const types = getTypes();
 
 document.addEventListener("change", (event) =>
-    event.target.name === "types" ? setTypes(parseInt(event.target.value)) : "fix your code"
+    event.target.name === "types" ? setTypes(parseInt(event.target.value)) : null
 );
 
 export const Types = () => {
