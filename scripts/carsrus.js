@@ -4,6 +4,7 @@ import { Paints } from "./paints.js";
 import { Interiors } from "./interiors.js";
 import { Orders } from "./Orders.js";
 import { createCustomOrder } from "./database.js";
+import { Types } from "./types.js";
 
 document.addEventListener("click", (event) => {
     if (event.target.id === "orderButton") {
@@ -15,6 +16,7 @@ const techs = Technologies();
 const wheels = Wheels();
 const paints = Paints();
 const interiors = Interiors();
+const types = Types();
 
 export const carsRus = () => {
     return `
@@ -34,6 +36,10 @@ export const carsRus = () => {
                 ${interiors}
             </section>
         </article>
+
+        <section>
+        ${types}
+        </section>
 
         <article>
             <button id="orderButton">Create Custom Order</button>
